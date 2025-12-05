@@ -164,6 +164,40 @@ Request repeated URLs → served instantly from memory
 
 Cache resets every time the server restarts
 
+**⏳ GitHub API Rate Limits (Important Note)**
+
+This project uses the public GitHub REST API without authentication, which is limited to:
+
+60 requests per hour per IP address (for unauthenticated users)
+
+Because of this, heavy or repeated testing may trigger GitHub’s rate limit.
+If the limit is exceeded, GitHub returns:
+
+{
+  "message": "API rate limit exceeded"
+}
+
+
+and the Flask API will respond with a structured 502 Bad Gateway error.
+
+**✔ How to avoid rate limiting**
+
+If more frequent requests are needed, you can authenticate your GitHub requests using a personal access token (PAT):
+
+Create a token on GitHub (Settings → Developer Settings → Personal Access Tokens).
+
+Add it as a header in fetch_from_github():
+
+headers = {"Authorization": "Bearer YOUR_GITHUB_TOKEN"}
+resp = requests.get(url, headers=headers, timeout=TIMEOUT_SECONDS)
+
+
+Authentication raises the limit to:
+
+5,000 requests per hour
+
+For this assignment, authentication is not required, but rate limits may affect testing.
+
 **## 📸 Screenshots**
 
 ### 1. Server Running
