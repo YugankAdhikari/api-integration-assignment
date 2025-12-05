@@ -1,10 +1,10 @@
-API Integration Assignment – GitHub User & Repository Explorer
+**API Integration Assignment – GitHub User & Repository Explorer**
 
 A Flask-based API wrapper that integrates with the public GitHub REST API, fetches user and repository data, applies filtering, caches results, and exposes clean API endpoints.
 
 This project fulfills all requirements outlined in the Global Trend – API Integration Internship Assignment.
 
-📌 Features
+**📌 Features**
 
 Fetch data from two GitHub REST API endpoints
 
@@ -28,7 +28,7 @@ Missing/malformed fields
 
 Incorrect user input
 
-🚀 Tech Stack
+**🚀 Tech Stack**
 
 Python 3
 
@@ -36,9 +36,9 @@ Flask (backend framework)
 
 Requests (HTTP client)
 
-🔧 Setup Instructions
+**🔧 Setup Instructions**
 1. Clone the repository
-git clone https://github.com/YugankAdhikari/api-integration-assignment
+git clone https://github.com/YugankAdhikari/api-integration-assignment 
 cd api-integration-assignment
 
 2. Create & activate virtual environment (optional but recommended)
@@ -65,7 +65,7 @@ If successful, you will see:
  * Serving Flask app 'app'
  * Running on http://127.0.0.1:5000
 
-📡 Public API Endpoints Used
+**📡 Public API Endpoints Used**
 
 This project uses the GitHub REST API (no API key required):
 
@@ -75,7 +75,7 @@ https://api.github.com/users/{username}
 User repositories
 https://api.github.com/users/{username}/repos
 
-🧠 Your Flask API Endpoints
+**🧠 Your Flask API Endpoints**
 1. Get user info
 GET /api/users/<username>
 
@@ -121,7 +121,7 @@ If repo doesn’t exist:
 
 {"error": "Repository not found"}
 
-⚠️ Error Handling
+**⚠️ Error Handling**
 
 This API includes handling for:
 
@@ -150,7 +150,7 @@ When GitHub fails, our API returns a structured 502 Bad Gateway response:
   "status_code": 404
 }
 
-🗄️ Data Caching
+**🗄️ Data Caching**
 
 To reduce repeated GitHub calls, responses are cached in memory:
 
@@ -164,7 +164,7 @@ Request repeated URLs → served instantly from memory
 
 Cache resets every time the server restarts
 
-## 📸 Screenshots
+**## 📸 Screenshots**
 
 ### 1. Server Running
 ![Server Running](screenshots/01_server_running.png)
