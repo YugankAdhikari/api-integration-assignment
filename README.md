@@ -163,3 +163,23 @@ CACHE = {
 Request repeated URLs → served instantly from memory
 
 Cache resets every time the server restarts
+
+## 📸 Screenshots
+
+### 1. Server Running
+![Server Running](screenshots/01_server_running.png)
+
+### 2. User Endpoint
+![User Endpoint](screenshots/02_user_endpoint.png)
+
+### 3. Repositories List
+![Repos List](screenshots/03_repos_endpoint.png)
+
+### 4. Filtered Repos
+![Filtered Repos](screenshots/04_filtered_repos.png)
+
+### 5. Single Repo Detail
+![Repo Detail](screenshots/05_repo_detail.png)
+
+### 6. Error Handling
+![Error Handling](screenshots/06_error_handling.png)
